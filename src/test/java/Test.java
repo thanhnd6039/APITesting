@@ -43,21 +43,21 @@ public class Test {
         String bookId = books.get(0).get("isbn");
 
         //Step 3 Add a book from the list to the user
-        requestParams.clear();
-        JSONArray collectionOfIsbns = new JSONArray();
-        JSONObject isbnItem = new JSONObject();
-        isbnItem.put("isbn", bookId);
-        collectionOfIsbns.add(isbnItem);
-        requestParams.put("userId", userID);
-        requestParams.put("collectionOfIsbns", collectionOfIsbns);
-
-
-        request.header("Authorization", "Bearer " + token)
-                .header("Content-Type", "application/json");
-
-        request.body(requestParams.toJSONString());
-        response = request.post("/BookStore/v1/Books");
-        Assert.assertEquals(response.getStatusCode(), 201);
+//        requestParams.clear();
+//        JSONArray collectionOfIsbns = new JSONArray();
+//        JSONObject isbnItem = new JSONObject();
+//        isbnItem.put("isbn", bookId);
+//        collectionOfIsbns.add(isbnItem);
+//        requestParams.put("userId", userID);
+//        requestParams.put("collectionOfIsbns", collectionOfIsbns);
+//
+//
+//        request.header("Authorization", "Bearer " + token)
+//                .header("Content-Type", "application/json");
+//
+//        request.body(requestParams.toJSONString());
+//        response = request.post("/BookStore/v1/Books");
+//        Assert.assertEquals(response.getStatusCode(), 201);
 
         //Step 4 Delete a book
         requestParams.clear();
